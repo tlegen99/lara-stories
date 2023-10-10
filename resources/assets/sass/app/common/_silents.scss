@@ -1,0 +1,165 @@
+// Очищение потока
+%clear-fix {
+  
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Выравнивание по центру
+%margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Выравнивание по центру
+%flex-middle {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  
+  &::after {
+    content: '';
+    min-height: inherit;
+    font-size: 0;
+  }
+}
+
+// Выравнивание по вертикали
+%flex-vertical {
+  align-items: center;
+  display: flex;
+  
+  &::after {
+    content: '';
+    min-height: inherit;
+    font-size: 0;
+  }
+}
+
+// Выравнивание по горизонтали
+%flex-horizontal {
+  justify-content: center;
+  display: flex;
+  
+  &::after {
+    content: '';
+    min-height: inherit;
+    font-size: 0;
+  }
+}
+
+// Отступы сбоку
+%side-padding {
+  padding-left: $padding-pc;
+  padding-right: $padding-pc;
+}
+
+// Запрет выделения
+%deny-select {
+  user-select: none;
+}
+
+%flex {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  display: flex;
+  
+  & > * {
+    flex: 1 0;
+  }
+}
+
+// 50% Flex
+%half-flex {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  display: flex;
+  
+  & > * {
+    flex: 1 0 50%;
+  }
+}
+
+// 33% Flex
+%third-flex {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  display: flex;
+  
+  & > * {
+    flex: 1 0 33.33%;
+  }
+}
+
+// 25% Flex
+%fourth-flex {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  display: flex;
+  
+  & > * {
+    flex: 1 0 25%;
+  }
+}
+
+%fifth-flex {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  display: flex;
+  
+  & > * {
+    flex: 1 0 20%;
+  }
+}
+
+%sixth-flex {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  display: flex;
+  
+  & > * {
+    flex: 1 0 16.66%;
+  }
+}
+
+// Отступы сбоку
+%side-padding {
+  padding-left: $padding-pc;
+  padding-right: $padding-pc;
+}
+
+%divider {
+  background-color: #d9e1e1;
+  width: 100%;
+  height: 1px;
+}
+
+@media screen and (max-width: 1345px) {
+  
+  // Отступы сбоку
+  %side-padding {
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  
+  // Отступы сбоку
+  %side-padding {
+    padding-left: $padding-tablet-portrait;
+    padding-right: $padding-tablet-portrait;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  
+  // Отступы сбоку
+  %side-padding {
+    padding-left: $padding-mobile;
+    padding-right: $padding-mobile;
+  }
+}

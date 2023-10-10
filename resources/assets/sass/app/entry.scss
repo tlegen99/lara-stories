@@ -1,0 +1,25 @@
+// Бутстрап
+@import "~style_app/bootstrap/bootstrap.min.css";
+@import "~style_app/bootstrap/bootstrap-icons.css";
+
+// Сброс стилей
+@import "~style_app/common/reset";
+// Стили шрифтов
+@import "~style_app/entry-app-fonts";
+// Файл с миксинами
+@import "~style_app/common/mixins";
+// Вспомогательные переменные для стилей
+@import "~style_app/common/vars";
+// Silents
+@import "~style_app/common/silents";
+// Базовые стили
+@import "~style_app/common/common";
+///////////////////////////////////////////////////// Элементы
+// Row
+@import "~style_app/elements/row";
+
+// H
+@import "~style_app/elements/h";
+
+///////////////////////////////////////////////////// Админка
+@import "~style_app/admin/admin";

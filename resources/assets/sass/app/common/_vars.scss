@@ -1,0 +1,50 @@
+// Максимальная ширина сайта
+$max-site-width: 1452px;
+
+// Паддинг PC
+$padding-pc: 70px;
+
+// Паддинг на планшете
+$padding-tablet: 50px;
+
+// Паддинг на планшете в портрете
+$padding-tablet-portrait: 21px;
+
+// Паддинг на мобиле
+$padding-mobile: 15px;
+
+// Общее скругление на сайте
+$border-radius: 15px;
+
+// Цвет выделения текста
+$select-color: rgba(#c4c4c4, .5);
+
+// Тень блоков
+$box-shadow: 4px 4px 68px rgba(0, 0, 0, .09);
+
+// Основной цвет
+$text_common: #000;
+
+// Заголовки
+$title: #4c424a;
+$title-light: #f8f8f8;
+
+// Дополнительные цвета
+$text-gray: #c4c4c4;
+
+$accent-color: #81c400;
+$accent-hover: #94d616;
+
+$btn-color: #344f01;
+
+// Фоны
+$bg-light: #f2f2f2;
+$bg-gray: #353535;
+
+// Шрифты
+$font-300: proxima-light;
+$font-400: proxima;
+$font-500: proxima-medium;
+$font-600: proxima-semi-bold;
+$font-700: proxima-bold;
+$font-800: proxima-extra-bold;

@@ -1,0 +1,30 @@
+// Ширина сайта
+.row {
+  @extend %clear-fix;
+  @extend %margin-center;
+  @extend %side-padding;
+  max-width: $max-site-width;
+  height: 100%;
+}
+
+//.row_short {
+//  @extend .row;
+//  max-width: 800px;
+//  line-height: 30px;
+//
+//  // Tmp styles
+//  margin-top: 30px;
+//
+//  p {
+//    margin-bottom: 20px;
+//  }
+//
+//  .h2 {
+//    margin-top: 40px;
+//    margin-bottom: 20px;
+//
+//    br {
+//      display: none;
+//    }
+//  }
+//}

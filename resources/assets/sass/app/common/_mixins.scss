@@ -1,0 +1,39 @@
+// Шрифты
+@mixin font($font: proxima) {
+  
+  @if $font == proxima-light {
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @if $font == proxima {
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @if $font == proxima-medium {
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @if $font == proxima-semi-bold {
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @if $font == proxima-bold {
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @if $font == proxima-extra-bold {
+    font-family: "Proxima Nova", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+}

@@ -1,0 +1,43 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*::before,*::after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;text-decoration: inherit;vertical-align: inherit;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside,main{display: block;}
+html{-webkit-tap-highlight-color: transparent;-webkit-text-size-adjust: 100%;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea,select{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+a:not([class]){text-decoration-skip-ink: auto;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+pre{font-family: monospace, monospace;font-size: 1em;overflow: auto;-ms-overflow-style: scrollbar;}
+b,strong{font-weight: bolder;}
+audio,canvas,iframe,img,svg,video{vertical-align: middle;}
+audio,video {display: inline-block;}
+audio:not([controls]){display: none;height: 0;}
+iframe,img{border-style: none;}
+svg:not([fill]){fill: currentColor;}
+svg:not(:root){overflow: hidden;}
+button{overflow: visible;text-transform: none;}
+button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance: button}
+select{text-transform: none;}
+textarea{resize: vertical;overflow: auto;margin: 0;}
+[type="search"]{-webkit-appearance: textfield;outline-offset: -2px;}
+::-webkit-inner-spin-button,::-webkit-outer-spin-button{height: auto;}
+::-webkit-input-placeholder{color: inherit;opacity: 0.54;}
+::-webkit-search-decoration{-webkit-appearance: none;}
+::-webkit-file-upload-button{-webkit-appearance: button;font: inherit;}
+::-moz-focus-inner{border-style: none;padding: 0;}
+:-moz-ui-invalid{box-shadow: none;}
+[aria-busy="true"]{cursor: progress;}
+[aria-controls]{cursor: pointer;}
+[aria-disabled="true"],[disabled]{cursor: not-allowed;}
+// Удаляем все анимации и переходы для людей, которые предпочитай их не использовать
+@media (prefers-reduced-motion: reduce) {
+  * {animation-duration: 0.01ms !important;animation-iteration-count: 1 !important;transition-duration: 0.01ms !important;scroll-behavior: auto !important;}
+}
