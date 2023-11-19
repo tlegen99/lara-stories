@@ -6,7 +6,13 @@
             <div class="admin__title">
                 <h1 class="h1">Список историй</h1>
             </div>
-            
+
+            @if(session('success'))
+                <div class="aler alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
@@ -21,7 +27,7 @@
                         <th></th>
                     </tr>
                 </thead>
-               
+
                 <tbody>
                     @foreach($stories as $story)
                         <tr>
