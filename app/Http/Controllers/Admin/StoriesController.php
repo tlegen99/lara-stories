@@ -33,6 +33,7 @@ class StoriesController extends Controller
         $stories = Stories::add($params);
 
         if ( ! $stories) {
+
             return Json::encode(["error" => "Ошибка при добавлении"]);
         }
 
