@@ -5,6 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Synergine\Template\Models\Template
+ *
+ * @property int $id ID
+ * @property string $name Имя
+ * @property string $body Описание
+ * @property int $views
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ */
 class Stories extends Model
 {
     use HasFactory;
@@ -24,14 +34,33 @@ class Stories extends Model
         "body",
     ];
 
-    public static function add(array $params)
+    public static function add($params)
     {
-        $stories = new static();
-        $stories->name = data_get($params, "name");
-        $stories->body = data_get($params, "body");
-        $stories->views = data_get($params, "views");
-        $stories->save();
+        $story = new static();
+        $story->name = data_get($params, "name");
+        $story->body = data_get($params, "body");
+        $story->views = data_get($params, "views");
+        $story->save();
 
-        return $stories;
+        return $story;
+    }
+
+    public static function edit($id, $params)
+    {
+        $story = static::find($id);
+        $story->name = data_get($params, "name");
+        $story->body = data_get($params, "body");
+        $story->views = data_get($params, "views");
+        $story->save();
+
+        return $story;
+    }
+
+    public static function remove($id)
+    {
+        $story = static::find($id);
+        $story->delete();
+
+        return true;
     }
 }

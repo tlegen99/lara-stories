@@ -17,7 +17,7 @@
                 <thead>
                     <tr>
                         <td colspan="9" class="admin__toolbar">
-                            <a href="{!! route('admin.stories.create') !!}" class="btn btn-success">Добавить</a>
+                            <a href="{{ route('admin.stories.create') }}" class="btn btn-success">Добавить</a>
                         </td>
                     </tr>
                     <tr>
@@ -36,13 +36,13 @@
                             <td>{{ $story->body }}</td>
                             <td>
                                 <div class="btn-group">
-                                    <a href="" class="btn btn-sm btn-outline-primary">
+                                    <a href="{{ route('admin.stories.preview', ["id" => $story->id]) }}" class="btn btn-sm btn-outline-primary">
                                         <i class="bi bi-arrow-up-right-square"></i>
                                     </a>
-                                    <a href="" class="btn btn-sm btn-outline-primary">
+                                    <a href="{{ route('admin.stories.edit', ["id" => $story->id]) }}" class="btn btn-sm btn-outline-primary">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
-                                    <a href="" class="btn btn-sm btn-outline-primary">
+                                    <a href="{{ route('admin.stories.delete', ["id" => $story->id]) }}" class="btn btn-sm btn-outline-primary">
                                         <i class="bi bi-trash"></i>
                                     </a>
                                 </div>

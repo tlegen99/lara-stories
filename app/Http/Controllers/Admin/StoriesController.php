@@ -24,19 +24,52 @@ class StoriesController extends Controller
 
     public function store(Request $request)
     {
-        $params = [
-            "name" => $request->input("name"),
-            "body" => $request->input("body"),
-            "views" => $request->input("views"),
-        ];
+        $story = Stories::add($request->except(["_token"]));
 
-        $stories = Stories::add($params);
-
-        if ( ! $stories) {
-
+        if ( ! $story) {
             return Json::encode(["error" => "Ошибка при добавлении"]);
         }
 
         return redirect()->route('admin.stories.index')->with("success", "История добавлена");
+    }
+
+    public static function preview(int $id)
+    {
+        $story = Stories::find($id);
+
+        return view("admin.stories.preview", [
+            "story" => $story
+        ]);
+    }
+
+    public static function edit(int $id)
+    {
+        $story = Stories::find($id);
+
+        return view("admin.stories.edit", [
+            "story" => $story
+        ]);
+    }
+
+    public static function update(int $id, Request $request)
+    {
+        $story = Stories::edit($id, $request);
+
+        if ( ! $story) {
+            return Json::encode(["error" => "Ошибка при редактировании"]);
+        }
+
+        return redirect()->route("admin.stories.edit", ["id" => $id])->with("success", "История отредактирована");
+    }
+
+    public static function delete(int $id)
+    {
+        $story = Stories::remove($id);
+
+        if ( ! $story) {
+            return Json::encode(["error" => "Ошибка при удалении"]);
+        }
+
+        return redirect()->route("admin.stories.index")->with("success", "История удалена");
     }
 }
