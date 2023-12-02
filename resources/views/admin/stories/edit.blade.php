@@ -32,7 +32,13 @@ $story = $story ?? null;
                     <label for="stories_views" class="form-label">Кол-во просмотров</label>
                     <input type="text" name="views" class="form-control" id="stories_views" value="{{ $story->views ?? "" }}">
                 </div>
-                <input type="submit" class="btn btn-success" value="Редактировать">
+
+                <div class="d-flex">
+                    <input type="submit" class="btn btn-success me-1" value="Редактировать">
+                    <a href="{!! route('admin.stories.index') !!}" class="btn btn-outline-secondary">
+                        <span>Назад</span>
+                    </a>
+                </div>
             </form>
         </div>
     </div>
